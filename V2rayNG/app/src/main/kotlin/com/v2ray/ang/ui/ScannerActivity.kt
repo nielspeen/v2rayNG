@@ -55,7 +55,7 @@ class ScannerActivity : BaseActivity(){
 
     private fun handleResult(result: QRResult) {
         if (result is QRResult.QRSuccess ) {
-            finished(result.content.rawValue)
+            finished(result.content.rawValue!!)
         } else {
             finish()
         }
